@@ -11,14 +11,17 @@ vim.cmd [[packadd packer.nvim]]
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {'neovim/nvim-lspconfig'}
+  use 'fatih/vim-go'
+  use 'neovim/nvim-lspconfig'
 end)
+
 require('lsp/common')
 
--- npm i -g typescript-language-server typescript pyright
+-- go install golang.org/x/tools/gopls@latest
+-- npm i -g typescript-language-server typescript
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
+lspconfig.gopls.setup {}
 lspconfig.tsserver.setup {}
 

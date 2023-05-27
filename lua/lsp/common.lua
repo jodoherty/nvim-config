@@ -1,16 +1,3 @@
--- windows install
--- git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-
--- unix install
--- git clone --depth 1 https://github.com/wbthomason/packer.nvim\
---  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-vim.cmd [[packadd packer.nvim]]
-
-require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use {'neovim/nvim-lspconfig'}
-end)
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
