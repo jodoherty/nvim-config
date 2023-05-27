@@ -1,0 +1,6 @@
+/*
+!.gitignore
+!init*.lua
+!README.md
+!/lua
+/lua/**/*.DS_Store
