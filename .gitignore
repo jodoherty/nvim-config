@@ -3,4 +3,6 @@
 !init*.lua
 !README.md
 !/lua
-/lua/**/*.DS_Store
+/lua/**/.DS_Store
+!/etc
+/etc/**/.DS_Store
