@@ -2,7 +2,9 @@
 # . ~/.config/nvim/etc/profile.sh
 
 export EDITOR=nvim
-bindkey -e
+if [ -n "$ZSH_VERSION" ]; then
+  bindkey -e
+fi
 
 alias go-nvim='nvim -u ~/.config/nvim/init_go.lua'
 alias py-nvim='nvim -u ~/.config/nvim/init_python.lua'
