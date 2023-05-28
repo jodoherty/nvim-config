@@ -1,3 +1,6 @@
+vim.opt.signcolumn = "yes"
+vim.opt.nu = true
+vim.opt.numberwidth = 5
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
