@@ -38,4 +38,5 @@ fi
 alias go-nvim='nvim -u ~/.config/nvim/init_go.lua'
 alias py-nvim='nvim -u ~/.config/nvim/init_python.lua'
 alias swift-nvim='nvim -u ~/.config/nvim/init_swift.lua'
+alias web-nvim='nvim -u ~/.config/nvim/init_web.lua'
 
