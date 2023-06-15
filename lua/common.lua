@@ -14,6 +14,7 @@ vim.opt.sw = 2
 vim.opt.et = true
 vim.opt.ai = true
 vim.opt.visualbell = true
+vim.opt.mouse = "a"
 
 vim.opt.encoding = "utf-8"
 

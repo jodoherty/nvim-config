@@ -2,6 +2,7 @@
 !.gitignore
 !init*.lua
 !README.md
+!setup.sh
 !/lua
 /lua/**/.DS_Store
 !/etc
