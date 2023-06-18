@@ -8,10 +8,7 @@ fi
 
 if [ "$(uname)" = "Darwin" ]; then
   hidutil_setup() {
-    /usr/bin/hidutil property --matching '{
-          "ProductID":0x342,
-          "VendorID":0x5ac
-        }' --set '{"UserKeyMapping":[
+    /usr/bin/hidutil property --set '{"UserKeyMapping":[
         {
           "HIDKeyboardModifierMappingSrc": 0x7000000E6,
           "HIDKeyboardModifierMappingDst": 0x7000000E4
@@ -28,10 +25,7 @@ if [ "$(uname)" = "Darwin" ]; then
   }
 
   hidutil_clear() {
-    /usr/bin/hidutil property --matching '{
-          "ProductID":0x342,
-          "VendorID":0x5ac
-        }' --set '{"UserKeyMapping":[]}'
+    /usr/bin/hidutil property --set '{"UserKeyMapping":[]}'
   }
 fi
 
