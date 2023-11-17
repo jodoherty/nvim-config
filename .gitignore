@@ -6,3 +6,5 @@
 /lua/**/.DS_Store
 !/etc
 /etc/**/.DS_Store
+!/scripts
+/scripts/**/.DS_Store
