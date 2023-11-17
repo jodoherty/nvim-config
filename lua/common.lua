@@ -1,12 +1,10 @@
-vim.cmd([[
-if has("win32") || has("win64")
-  lua require('windows')
-elseif !$TERM_PROGRAM =~ "Apple_Terminal"
-  lua require('unix')
+if vim.fn.has("macunix") == 1 then
+  require("macunix")
+elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
+  require("windows")
 else
-  lua require('macunix')
-endif
-]])
+  require("unixdark")
+end
 
 vim.opt.ts = 8
 vim.opt.sts = 2
