@@ -13,6 +13,7 @@ vim.opt.et = true
 vim.opt.ai = true
 vim.opt.visualbell = true
 vim.opt.list = true
+vim.opt.listchars = "tab:» ,trail:·,nbsp:·"
 
 vim.opt.encoding = "utf-8"
 
