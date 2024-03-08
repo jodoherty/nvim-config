@@ -1,9 +1,13 @@
+vim.cmd([[
+syntax off
+]])
+
 if vim.fn.has("macunix") == 1 then
   require("macunix")
 elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
   require("windows")
 else
-  require("unixdark")
+  require("unix")
 end
 
 vim.opt.ts = 8
