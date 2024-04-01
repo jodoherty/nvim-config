@@ -1,4 +1,3 @@
-vim.opt.signcolumn = "yes"
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -58,3 +57,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+-- Setup language servers.
+local lspconfig = require('lspconfig')
+lspconfig.clangd.setup {}
+lspconfig.gopls.setup {}
+lspconfig.pyright.setup {}
+lspconfig.tsserver.setup {}
+lspconfig.rust_analyzer.setup {}
+
