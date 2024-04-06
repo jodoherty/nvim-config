@@ -11,6 +11,11 @@ vim.opt.visualbell = true
 vim.opt.list = true
 vim.opt.listchars = "tab:» ,trail:·,nbsp:·"
 
+vim.opt.linebreak = true
+vim.opt.showbreak = "↳ "
+vim.opt.breakindent = true
+vim.opt.breakindentopt = "min:40,shift:2,sbr"
+
 vim.opt.encoding = "utf-8"
 
 vim.opt.backup = false
