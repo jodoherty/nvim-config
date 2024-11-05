@@ -1,10 +1,2 @@
-/*
-!.gitignore
-!init*.lua
-!README.md
-!/lua
-/lua/**/.DS_Store
-!/etc
-/etc/**/.DS_Store
-!/scripts
-/scripts/**/.DS_Store
+.DS_Store
+*-lock.json
