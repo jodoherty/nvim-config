@@ -19,6 +19,7 @@ vim.opt.writebackup = false
 vim.opt.signcolumn = "no"
 
 vim.cmd([[
+colorscheme habamax
 let loaded_matchparen = 1
 autocmd FileType go setlocal ts=4
 hi MatchParen cterm=bold,underline gui=bold,underline
@@ -102,7 +103,3 @@ require('config.lazy')
 -- lspconfig.pyright.setup {}
 -- lspconfig.tsserver.setup {}
 -- lspconfig.rust_analyzer.setup {}
-
-vim.cmd([[
-  colorscheme retrobox
-]])
