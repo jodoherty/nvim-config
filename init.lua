@@ -18,6 +18,11 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.signcolumn = "no"
 
+vim.g["g:conjure#filetypes"] = {
+  "clojure", "fennel", "janet", "hy",
+  "racket", "scheme", "lisp",
+}
+
 vim.cmd([[
 colorscheme habamax
 let loaded_matchparen = 1
