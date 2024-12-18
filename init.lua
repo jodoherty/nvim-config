@@ -18,7 +18,7 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.signcolumn = "no"
 
-vim.g["g:conjure#filetypes"] = {
+vim.g["conjure#filetypes"] = {
   "clojure", "fennel", "janet", "hy",
   "racket", "scheme", "lisp",
 }
