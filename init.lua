@@ -24,7 +24,8 @@ vim.g["conjure#filetypes"] = {
 }
 
 vim.cmd([[
-colorscheme habamax
+syntax off
+colorscheme quiet
 let loaded_matchparen = 1
 autocmd FileType go setlocal ts=4
 hi MatchParen cterm=bold,underline gui=bold,underline
