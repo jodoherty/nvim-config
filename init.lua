@@ -5,7 +5,7 @@ vim.opt.et = true
 vim.opt.ai = true
 vim.opt.visualbell = true
 vim.opt.list = true
-vim.opt.listchars = "tab:░ ,trail:·,nbsp:·"
+vim.opt.listchars = "tab:▒░,trail:·,nbsp:·"
 
 vim.opt.nu = true
 
@@ -42,7 +42,7 @@ colorscheme quiet
 let loaded_matchparen = 1
 autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
 hi MatchParen cterm=bold,underline gui=bold,underline
-hi LineNr ctermbg=234 ctermfg=239 guibg=#1d1d1d guifg=#444444
+hi LineNr ctermbg=235 ctermfg=239 guibg=#252525 guifg=#484848
 hi SpecialKey ctermfg=236 guifg=#444444
 ]])
 
