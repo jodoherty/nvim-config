@@ -124,12 +124,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.clangd.setup {}
-lspconfig.gopls.setup {}
--- lspconfig.pyright.setup {}
+-- lspconfig.clangd.setup {}
 -- lspconfig.tsserver.setup {}
 -- lspconfig.rust_analyzer.setup {}
 
+lspconfig.gopls.setup {}
 
 lspconfig.ruff.setup {}
 lspconfig.pyright.setup {
