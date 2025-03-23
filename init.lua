@@ -27,7 +27,7 @@ vim.cmd([[
 syntax off
 colorscheme quiet
 let loaded_matchparen = 1
-autocmd FileType go setlocal ts=4
+autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
 hi MatchParen cterm=bold,underline gui=bold,underline
 ]])
 
@@ -118,16 +118,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Setup language servers.
--- local lspconfig = require('lspconfig')
--- lspconfig.clangd.setup {}
--- lspconfig.gopls.setup {}
+local lspconfig = require('lspconfig')
+lspconfig.clangd.setup {}
+lspconfig.gopls.setup {}
 -- lspconfig.pyright.setup {}
 -- lspconfig.tsserver.setup {}
 -- lspconfig.rust_analyzer.setup {}
 
 
-require('lspconfig').ruff.setup {}
-require('lspconfig').pyright.setup {
+lspconfig.ruff.setup {}
+lspconfig.pyright.setup {
   settings = {
     pyright = {
       -- Using Ruff's import organizer
