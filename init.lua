@@ -5,7 +5,9 @@ vim.opt.et = true
 vim.opt.ai = true
 vim.opt.visualbell = true
 vim.opt.list = true
-vim.opt.listchars = "tab:» ,trail:·,nbsp:·"
+vim.opt.listchars = "tab:░ ,trail:·,nbsp:·"
+
+vim.opt.nu = true
 
 vim.opt.linebreak = true
 vim.opt.showbreak = "↳ "
@@ -23,14 +25,6 @@ vim.g["conjure#filetypes"] = {
   "racket", "scheme", "lisp",
 }
 
-vim.cmd([[
-syntax off
-colorscheme quiet
-let loaded_matchparen = 1
-autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
-hi MatchParen cterm=bold,underline gui=bold,underline
-]])
-
 if vim.fn.has("macunix") == 1 then
   vim.opt.termguicolors = false
 elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
@@ -40,6 +34,17 @@ elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
 else
   vim.opt.termguicolors = true
 end
+
+vim.cmd([[
+syntax off
+set bg=dark
+colorscheme quiet
+let loaded_matchparen = 1
+autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
+hi MatchParen cterm=bold,underline gui=bold,underline
+hi LineNr ctermbg=234 ctermfg=239 guibg=#1d1d1d guifg=#444444
+hi SpecialKey ctermfg=236 guifg=#444444
+]])
 
 require('config.lazy')
 
