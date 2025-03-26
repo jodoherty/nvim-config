@@ -7,7 +7,7 @@ vim.opt.visualbell = true
 vim.opt.list = true
 vim.opt.listchars = "tab:▒░,trail:·,nbsp:·"
 
-vim.opt.nu = true
+vim.opt.nu = false
 
 vim.opt.linebreak = true
 vim.opt.showbreak = "↳ "
@@ -45,18 +45,6 @@ hi MatchParen cterm=bold,underline gui=bold,underline
 hi LineNr ctermbg=235 ctermfg=239 guibg=#252525 guifg=#484848
 hi SpecialKey ctermfg=236 guifg=#444444
 ]])
-
-vim.g.clipboard = {
-  name = 'OSC 52',
-  copy = {
-    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
-  },
-  paste = {
-    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
-  },
-}
 
 require('config.lazy')
 
