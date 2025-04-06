@@ -20,32 +20,24 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.signcolumn = "no"
 
-vim.g["conjure#filetypes"] = {
-  "clojure", "fennel", "janet", "hy",
-  "racket", "scheme", "lisp",
-}
-
-if vim.fn.has("macunix") == 1 then
-  vim.opt.termguicolors = false
-elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
-  vim.opt.termguicolors = true
+if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
   vim.opt.fileformats = "unix,dos"
   vim.opt.fileencodings = "utf-8,ucs-bom,default,latin1"
-else
-  vim.opt.termguicolors = true
 end
 
 vim.cmd([[
 autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
+
 set termguicolors
 set bg=light
 colorscheme vim
-syntax on
+syntax off
 let loaded_matchparen = 1
 hi LineNr guibg=#cdcdcd guifg=#8d8d8d
 hi SpecialKey guifg=#dcdcdc
 hi Whitespace guifg=#dcdcdc
 ]])
+
 
 require('config.lazy')
 
@@ -146,3 +138,4 @@ lspconfig.pyright.setup {
     },
   },
 }
+
