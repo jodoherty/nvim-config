@@ -36,14 +36,15 @@ else
 end
 
 vim.cmd([[
-syntax off
-set bg=dark
-colorscheme quiet
-let loaded_matchparen = 1
 autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
-hi MatchParen cterm=bold,underline gui=bold,underline
-hi LineNr ctermbg=235 ctermfg=239 guibg=#252525 guifg=#484848
-hi SpecialKey ctermfg=236 guifg=#444444
+set termguicolors
+set bg=light
+colorscheme vim
+syntax on
+let loaded_matchparen = 1
+hi LineNr guibg=#cdcdcd guifg=#8d8d8d
+hi SpecialKey guifg=#dcdcdc
+hi Whitespace guifg=#dcdcdc
 ]])
 
 require('config.lazy')
