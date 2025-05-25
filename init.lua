@@ -117,25 +117,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
--- lspconfig.clangd.setup {}
+lspconfig.clangd.setup {}
 -- lspconfig.tsserver.setup {}
 -- lspconfig.rust_analyzer.setup {}
-
 lspconfig.gopls.setup {}
 
-lspconfig.ruff.setup {}
-lspconfig.pyright.setup {
-  settings = {
-    pyright = {
-      -- Using Ruff's import organizer
-      disableOrganizeImports = true,
-    },
-    python = {
-      analysis = {
-        -- Ignore all files for analysis to exclusively use Ruff for linting
-        ignore = { '*' },
-      },
-    },
-  },
-}
-
+require'nvim-treesitter.configs'.setup{highlight={enable=true}}
