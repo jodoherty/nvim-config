@@ -29,13 +29,9 @@ vim.cmd([[
 autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
 
 set termguicolors
-set bg=light
+set bg=dark
 colorscheme quiet
 let loaded_matchparen = 1
-hi LineNr guibg=#cdcdcd guifg=#8d8d8d
-hi SpecialKey guifg=#dcdcdc
-hi Whitespace guifg=#dcdcdc
-hi Normal guibg=#ffffff
 ]])
 
 
@@ -123,4 +119,3 @@ lspconfig.rust_analyzer.setup {}
 lspconfig.gopls.setup {}
 lspconfig.pyright.setup {}
 
-require'nvim-treesitter.configs'.setup{highlight={enable=true}}
