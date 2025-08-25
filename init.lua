@@ -7,7 +7,7 @@ vim.opt.visualbell = true
 vim.opt.list = true
 vim.opt.listchars = "tab:▒░,trail:·,nbsp:·"
 
-vim.opt.nu = false
+vim.opt.nu = true
 
 vim.opt.linebreak = true
 vim.opt.showbreak = "↳ "
@@ -32,6 +32,7 @@ set termguicolors
 set bg=dark
 colorscheme quiet
 let loaded_matchparen = 1
+hi LineNr guibg=#282828
 ]])
 
 
