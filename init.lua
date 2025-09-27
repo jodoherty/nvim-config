@@ -112,11 +112,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
   desc = 'LSP: Disable hover capability from Ruff',
 })
 
--- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.clangd.setup {}
-lspconfig.ts_ls.setup {}
-lspconfig.rust_analyzer.setup {}
-lspconfig.gopls.setup {}
-lspconfig.pyright.setup {}
-
