@@ -29,10 +29,11 @@ vim.cmd([[
 autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
 
 set termguicolors
-set bg=dark
+set bg=light
 colorscheme quiet
+hi Normal guibg=#ffffff
 let loaded_matchparen = 1
-hi LineNr guibg=#282828
+hi LineNr guibg=#c8c8c8
 ]])
 
 
