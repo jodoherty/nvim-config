@@ -32,7 +32,6 @@ set termguicolors
 set bg=light
 colorscheme quiet
 hi Normal guibg=#ffffff
-let loaded_matchparen = 1
 hi LineNr guibg=#c8c8c8
 hi Whitespace guifg=#d0d0d0
 hi SpecialKey guifg=#d0d0d0
