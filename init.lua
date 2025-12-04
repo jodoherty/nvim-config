@@ -32,7 +32,7 @@ set termguicolors
 set bg=light
 colorscheme quiet
 hi Normal guibg=#ffffff
-hi LineNr guibg=#c8c8c8
+hi LineNr guibg=#efefef
 hi Whitespace guifg=#d0d0d0
 hi SpecialKey guifg=#d0d0d0
 ]])
