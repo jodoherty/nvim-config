@@ -43,9 +43,9 @@ set termguicolors
 set bg=light
 colorscheme quiet
 hi Normal guibg=#ffffff
-hi LineNr guibg=#efefef
-hi Whitespace guifg=#d0d0d0
-hi SpecialKey guifg=#d0d0d0
+hi LineNr guibg=#d0d0d0
+hi Whitespace guifg=#e0e0e0
+hi SpecialKey guifg=#e0e0e0
 ]])
 
 vim.lsp.enable('clangd')
