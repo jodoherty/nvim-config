@@ -31,28 +31,29 @@ if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
 end
 
 vim.cmd([[
+  filetype indent off
 
-filetype indent off
+  autocmd FileType cmake :setlocal ts=8 sw=8 sts=0 noet
+  autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
+  autocmd FileType meson :setlocal ts=8 sw=8 sts=0 noet
+  autocmd FileType make :setlocal ts=8 sw=8 sts=0 noet
+  autocmd FileType python :setlocal ts=8 sw=4 sts=4 et
+  autocmd FileType zig :setlocal ts=8 sw=4 sts=4 et
 
-autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
-autocmd FileType meson :setlocal ts=8 sw=8 sts=0 noet
-autocmd FileType make :setlocal ts=8 sw=8 sts=0 noet
-autocmd FileType python :setlocal ts=8 sw=4 sts=4 et
-
-set termguicolors
-set bg=light
-colorscheme quiet
-hi Normal guibg=#ffffff
-hi LineNr guibg=#d0d0d0
-hi Whitespace guifg=#e0e0e0
-hi SpecialKey guifg=#e0e0e0
+  set termguicolors
+  set bg=light
+  colorscheme quiet
+  hi Normal guibg=#ffffff
+  hi LineNr guibg=#d0d0d0
+  hi Whitespace guifg=#e0e0e0
+  hi SpecialKey guifg=#e0e0e0
 ]])
 
 vim.lsp.enable('clangd')
 vim.lsp.enable('gopls')
-vim.lsp.enable('lua_ls')
 vim.lsp.enable('pyright')
 vim.lsp.enable('rust-analyzer')
+vim.lsp.enable('zls')
 
 vim.keymap.set('n', '<space>f', function()
   vim.cmd("Neoformat")
