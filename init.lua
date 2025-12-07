@@ -53,6 +53,7 @@ vim.cmd([[
 ]])
 
 vim.lsp.enable('clangd')
+-- go install golang.org/x/tools/gopls@latest
 vim.lsp.enable('gopls')
 vim.lsp.enable('pyright')
 vim.lsp.enable('rust-analyzer')
