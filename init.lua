@@ -12,7 +12,7 @@ vim.opt.visualbell = true
 vim.opt.list = true
 vim.opt.listchars = "tab:▒░,trail:·,nbsp:·"
 
-vim.opt.nu = true
+vim.opt.nu = false
 
 vim.opt.linebreak = true
 vim.opt.showbreak = "↳ "
@@ -47,6 +47,9 @@ vim.cmd([[
   hi LineNr guibg=#d0d0d0
   hi Whitespace guifg=#e0e0e0
   hi SpecialKey guifg=#e0e0e0
+  hi clear Comment
+  hi clear TODO
+  hi Comment guifg=#505050
 ]])
 
 vim.lsp.enable('clangd')
