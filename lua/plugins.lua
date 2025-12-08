@@ -7,7 +7,10 @@ return {
     'folke/snacks.nvim',
     ---@type snacks.Config
     opts = {
-      explorer = {},
+      explorer = {
+        replace_netrw = false,
+        trash = false,
+      },
       picker = {
         formatters = {
           file = {
