@@ -1,8 +1,9 @@
 return {
-  {'sbdchd/neoformat'},
-  {'neovim/nvim-lspconfig'},
-  {'nvim-mini/mini.icons'},
-  {'nvim-tree/nvim-web-devicons', opts = {}},
+  { 'sbdchd/neoformat' },
+  { 'neovim/nvim-lspconfig' },
+--  { 'mfussenegger/nvim-jdtls' },
+  { 'nvim-mini/mini.icons' },
+  { 'nvim-tree/nvim-web-devicons', opts = {} },
   {
     'folke/snacks.nvim',
     ---@type snacks.Config

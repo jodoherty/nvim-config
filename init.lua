@@ -4,6 +4,9 @@ vim.opt.ts = 8
 vim.opt.sts = 2
 vim.opt.sw = 2
 vim.opt.et = true
+
+vim.opt.textwidth = 79
+
 vim.opt.ai = true
 vim.opt.cindent = false
 vim.opt.smartindent = false
@@ -52,11 +55,22 @@ vim.cmd([[
   hi Comment guifg=#505050
 ]])
 
+-- vim.lsp.enable('ada_ls')
 vim.lsp.enable('clangd')
--- go install golang.org/x/tools/gopls@latest
+-- vim.lsp.enable('clojure_lsp')
+-- vim.lsp.enable('erlangls')
+-- vim.lsp.enable('expert')
+-- $ go install golang.org/x/tools/gopls@latest
 vim.lsp.enable('gopls')
+vim.lsp.enable('hls')
+-- See: https://download.eclipse.org/jdtls/milestones/?d
+-- vim.lsp.enable('jdtls')
+-- $ opam install ocaml-lsp-server
+-- vim.lsp.enable('ocamllsp')
 vim.lsp.enable('pyright')
-vim.lsp.enable('rust-analyzer')
+vim.lsp.enable('rust_analyzer')
+-- $ gem install --user-install solargraph
+-- vim.lsp.enable('solargraph')
 vim.lsp.enable('zls')
 
 vim.keymap.set('n', '<space>f', function()
@@ -69,5 +83,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local opts = { buffer = ev.buf }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.opt.formatprg = ''
   end,
 })
