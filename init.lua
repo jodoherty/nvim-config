@@ -71,6 +71,8 @@ vim.lsp.enable('pyright')
 vim.lsp.enable('rust_analyzer')
 -- $ gem install --user-install solargraph
 -- vim.lsp.enable('solargraph')
+-- $ npm install -g typescript-language-server typescript
+vim.lsp.enable('ts_ls')
 vim.lsp.enable('zls')
 
 vim.keymap.set('n', '<space>f', function()
