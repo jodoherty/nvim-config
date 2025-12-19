@@ -1,4 +1,5 @@
 return {
+  { "ellisonleao/gruvbox.nvim" },
   { 'sbdchd/neoformat' },
   { 'neovim/nvim-lspconfig' },
 --  { 'mfussenegger/nvim-jdtls' },
