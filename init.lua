@@ -44,6 +44,7 @@ vim.cmd([[
   autocmd FileType zig :setlocal ts=8 sw=4 sts=4 et
 
   set termguicolors
+  hi Whitespace guifg=#323232
 ]])
 
 -- vim.lsp.enable('ada_ls')
