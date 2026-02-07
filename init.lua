@@ -5,8 +5,6 @@ vim.opt.sts = 2
 vim.opt.sw = 2
 vim.opt.et = true
 
-vim.opt.textwidth = 79
-
 vim.opt.ai = true
 vim.opt.cindent = false
 vim.opt.smartindent = false
