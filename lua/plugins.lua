@@ -8,6 +8,8 @@ return {
   {
     'folke/snacks.nvim',
     ---@type snacks.Config
+    lazy = false,
+    priority = 1000,
     opts = {
       explorer = {
         replace_netrw = false,

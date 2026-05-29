@@ -65,6 +65,9 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('zls')
 
+vim.lsp.enable('rubocop')
+-- vim.lsp.enable('ruby_lsp')
+
 vim.keymap.set('n', '<space>f', function()
   vim.cmd("Neoformat")
 end)
