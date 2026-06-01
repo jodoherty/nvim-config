@@ -45,6 +45,21 @@ vim.cmd([[
   hi Whitespace guifg=#323232
 ]])
 
+
+-- Ruby setup
+vim.g.neoformat_ruby_rubocop = {
+    exe = 'bundle',
+    args = {'exec', 'rubocop', '--auto-correct', '--stdin', '"%:p"', '2>/dev/null', '|', 'sed', '"1,/^====================$/d"'},
+    stdin = 1,
+}
+vim.g.neoformat_enabled_ruby = {'rubocop'}
+vim.lsp.config('rubocop', {
+  cmd = { "bundle", "exec", "rubocop", "--lsp" }
+})
+vim.lsp.enable('rubocop')
+
+
+
 -- vim.lsp.enable('ada_ls')
 vim.lsp.enable('clangd')
 -- vim.lsp.enable('clojure_lsp')
@@ -59,8 +74,6 @@ vim.lsp.enable('hls')
 -- vim.lsp.enable('ocamllsp')
 vim.lsp.enable('pyright')
 vim.lsp.enable('rust_analyzer')
--- $ gem install --user-install solargraph
--- vim.lsp.enable('solargraph')
 -- $ npm install -g typescript-language-server typescript
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('zls')
