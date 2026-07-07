@@ -33,6 +33,7 @@ end
 
 vim.cmd([[
   filetype indent off
+  set nomodeline
 
   autocmd FileType cmake :setlocal ts=8 sw=8 sts=0 noet
   autocmd FileType go setlocal ts=4 sw=4 sts=0 noet
@@ -42,23 +43,16 @@ vim.cmd([[
   autocmd FileType zig :setlocal ts=8 sw=4 sts=4 et
 
   set termguicolors
+  colorscheme quiet
   hi Whitespace guifg=#323232
 ]])
 
 
 -- Ruby setup
-vim.g.neoformat_ruby_rubocop = {
-    exe = 'bundle',
-    args = {'exec', 'rubocop', '--auto-correct', '--stdin', '"%:p"', '2>/dev/null', '|', 'sed', '"1,/^====================$/d"'},
-    stdin = 1,
-}
-vim.g.neoformat_enabled_ruby = {'rubocop'}
 vim.lsp.config('rubocop', {
   cmd = { "bundle", "exec", "rubocop", "--lsp" }
 })
 vim.lsp.enable('rubocop')
-
-
 
 -- vim.lsp.enable('ada_ls')
 vim.lsp.enable('clangd')
@@ -78,16 +72,3 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('zls')
 
-vim.keymap.set('n', '<space>f', function()
-  vim.cmd("Neoformat")
-end)
-
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-  callback = function(ev)
-    local opts = { buffer = ev.buf }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-    vim.opt.formatprg = ''
-  end,
-})
